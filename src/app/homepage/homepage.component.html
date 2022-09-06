@@ -1,0 +1,15 @@
+<form class="example-form layout">
+  <mat-form-field class="example-full-width " appearance="fill" >
+    <mat-label>Rechercher une catégorie</mat-label>
+    <input matInput #message maxlength="256" placeholder="Ex. Pizza...">
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+</form>
+
+<form class="example-form layout">
+  <mat-form-field class="example-full-width " appearance="fill" >
+    <mat-label>Rechercher une marque</mat-label>
+    <input matInput #message maxlength="256" placeholder="Ex. Danone...">
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+</form>
