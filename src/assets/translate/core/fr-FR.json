@@ -1,0 +1,17 @@
+{
+  "APP_NAME": "Food Info",
+  "homepage": {
+    "research_by_category": "Rechercher par catégorie : ",
+    "research_by_brand": "Rechercher par marque : ",
+    "research_by_category_placeholder": "Rechercher par catégorie",
+    "research_by_brand_placeholder": "Rechercher par marque",
+    "research": "Rechercher ",
+    "nutriscore" :"Nutriscore : ",
+    "all" : "Tout"
+  },
+  "product_list": {
+    "see_details": "Voir le détail",
+    "nothing_found": "Il semblerait que votre recherche ne corresponde à aucun élément",
+    "return_to_research": "Retourner à la recherche"
+  }
+}
