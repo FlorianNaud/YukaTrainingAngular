@@ -1,0 +1,47 @@
+.image{
+  max-width: 50%;
+  max-height: 20%;
+  margin : 16px;
+}
+.main_content{
+  display:flex;
+  justify-content: space-evenly;
+}
+.nutriments_table{
+  width:50%;
+}
+.allCard{
+  margin:1%;
+}
+.spinner{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20%;
+}
+a, a:hover, a:active, a:visited {
+  color: white;
+}
+.mat-button{
+  background-color: gray;
+  display: flex;
+  margin: 5%;
+
+}
+@media (max-width: 599px) {
+
+
+    .main_content{
+      display:flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+
+    }
+  .nutriments_table{
+    width:100%;
+    margin-bottom: 10%;
+  }
+
+
+
+}

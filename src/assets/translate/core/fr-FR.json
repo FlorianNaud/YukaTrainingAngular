@@ -12,6 +12,7 @@
   "product_list": {
     "see_details": "Voir le détail",
     "nothing_found": "Il semblerait que votre recherche ne corresponde à aucun élément",
-    "return_to_research": "Retourner à la recherche"
+    "return_to_research": "Retourner à la recherche",
+    "api_error": "La recherche a échoué, veuillez réessayer plus tard"
   }
 }

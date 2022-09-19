@@ -2,8 +2,35 @@
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  margin : 1%
+
 }
 
 .example-full-width {
   width: 100%;
+}
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.example-margin {
+  margin: 0 10px;
+}
+
+
+@media (max-width: 599px) {
+  .nutriscoreField {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .mat-radio-button{
+    padding: 2px;
+  }
+  .example-section{
+    padding:10px;
+  }
 }

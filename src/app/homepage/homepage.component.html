@@ -1,15 +1,26 @@
-<form class="example-form layout">
+<form class="example-form layout" (ngSubmit)="search(f)" #f="ngForm" novalidate>
+  <label> {{ 'homepage.research_by_category' | translate }} </label>
   <mat-form-field class="example-full-width " appearance="fill" >
-    <mat-label>Rechercher une catégorie</mat-label>
-    <input matInput #message maxlength="256" placeholder="Ex. Pizza...">
+    <mat-label>{{ 'homepage.research_by_category_placeholder' | translate }}</mat-label>
+    <input matInput #message maxlength="256" placeholder="Ex. Pizza..." ngModel name="category">
     <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
   </mat-form-field>
-</form>
-
-<form class="example-form layout">
+  <label> {{ 'homepage.research_by_brand' | translate }} </label>
   <mat-form-field class="example-full-width " appearance="fill" >
-    <mat-label>Rechercher une marque</mat-label>
-    <input matInput #message maxlength="256" placeholder="Ex. Danone...">
-    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    <mat-label>{{ 'homepage.research_by_brand_placeholder' | translate }}</mat-label>
+    <input matInput #message2 maxlength="256" placeholder="Ex. Danone..." ngModel name="brand">
+    <mat-hint align="end">{{message2.value.length}} / 256</mat-hint>
   </mat-form-field>
+  <section class="example-section">
+    <label class="example-margin"> {{ 'homepage.nutriscore' | translate }}</label>
+    <mat-radio-group [(ngModel)]="nutriscore" [ngModelOptions]="{standalone: true}" class="nutriscoreField">
+      <mat-radio-button class="example-margin" value="A">A</mat-radio-button>
+      <mat-radio-button class="example-margin" value="B">B</mat-radio-button>
+      <mat-radio-button class="example-margin" value="C">C</mat-radio-button>
+      <mat-radio-button class="example-margin" value="D">D</mat-radio-button>
+      <mat-radio-button class="example-margin" value="E">E</mat-radio-button>
+      <mat-radio-button class="example-margin" value="" >{{ 'homepage.all' | translate }}</mat-radio-button>
+    </mat-radio-group>
+  </section>
+  <button mat-raised-button color="primary" class="submit">{{ 'homepage.research' | translate }}</button>
 </form>
