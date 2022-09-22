@@ -26,6 +26,8 @@ export class ProductListComponent implements OnInit {
   length:number = 1000;
   pageSize:number = 10;
   optionSizeArray = [5,10,25,50,100];
+  pageIndex =2;
+  carotte:Array<any>=[];
   pageEvent;
 
   ngOnInit(): void {
@@ -88,5 +90,23 @@ export class ProductListComponent implements OnInit {
       this.productList = data;
       this.length=this.productList.count
     })
+  }
+
+  reloadPage(){
+    window.location.reload()
+  }
+
+  onScroll(){
+    console.log("hello")
+    this.researchService.getListProduct(this.category,this.brand, this.nutriscore, this.pageIndex )
+      .pipe(tap(data => {
+      })).subscribe((data)=>{
+        let test;
+        test=data;
+        for(let i=0;i<test.products.length;i++){
+          this.productList.products.push(test.products[i])
+        }
+        this.pageIndex++
+  })
   }
 }

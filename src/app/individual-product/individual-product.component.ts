@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ResearchService} from "../service/research.service";
-import {tap, timeout} from "rxjs";
+import { timeout} from "rxjs";
 
 export interface EnergeticValue {
   nom: string;
@@ -56,6 +56,7 @@ export class IndividualProductComponent implements OnInit {
    */
       handleSuccess(data){
         this.product=data;
+        console.log(this.product);
         this.dataSource = [
           {nom: 'Energie', quantite: this.product.products[0].nutriments.energy
             , mesure: this.product.products[0].nutriments.energy_unit},
@@ -81,6 +82,7 @@ export class IndividualProductComponent implements OnInit {
    */
   handleFailure(){
         this.product='error';
+
       }
 
   /**

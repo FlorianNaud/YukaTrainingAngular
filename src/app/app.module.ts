@@ -23,6 +23,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {MultiTranslateHttpLoader} from "ngx-translate-multi-http-loader";
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -63,7 +64,8 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
-    })
+    }),
+    InfiniteScrollModule
 
   ],
   providers: [],
