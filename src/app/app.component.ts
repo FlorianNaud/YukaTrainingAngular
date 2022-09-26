@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'foodInfo';
+
+
+  ngOnInit(): void {
+    this.user()
+    console.log(this.user())
+
+  }
+  user(): any {
+    return localStorage.getItem('user');
+
+  }
+  logout(){
+    localStorage.clear()
+  }
 }

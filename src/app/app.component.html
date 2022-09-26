@@ -2,6 +2,9 @@
   <mat-toolbar color="primary">
 
       <a routerLink=""><span>{{ 'APP_NAME' | translate }}</span></a>
+      <span class="example-spacer"> </span>
+      <a routerLink="login" *ngIf="user()==null"><span>{{ 'LOGIN' | translate }}</span></a>
+      <a (click)="logout()"  routerLink="" *ngIf="user()!=null "><span>{{ 'LOGOUT' | translate }}</span></a>
 
   </mat-toolbar>
 </p>

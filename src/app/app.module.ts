@@ -24,6 +24,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {MultiTranslateHttpLoader} from "ngx-translate-multi-http-loader";
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { LoginComponent } from './login/login.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -37,7 +38,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     ProductListComponent,
     IndividualProductComponent,
-    HomepageComponent
+    HomepageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

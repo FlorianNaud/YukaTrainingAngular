@@ -1,0 +1,14 @@
+<form class="example-form layout" (ngSubmit)="search(f)" #f="ngForm" novalidate>
+  <label> {{ 'login.username' | translate }} </label>
+  <mat-form-field class="example-full-width " appearance="fill" >
+    <mat-label>{{ 'login.username' | translate }}</mat-label>
+    <input matInput   ngModel name="username">
+  </mat-form-field>
+  <label> {{ 'login.password' | translate }} </label>
+  <mat-form-field class="example-full-width " appearance="fill"  >
+    <mat-label>{{ 'login.password' | translate }}</mat-label>
+    <input matInput   ngModel name="password">
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="submit">{{ 'login.confirm' | translate }}</button>
+</form>
+<div><p>{{errorMessage}}</p></div>

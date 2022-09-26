@@ -1,5 +1,7 @@
 {
   "APP_NAME": "Food Info",
+  "LOGIN": "Connexion",
+  "LOGOUT": "Déconnexion",
   "homepage": {
     "research_by_category": "Rechercher par catégorie : ",
     "research_by_brand": "Rechercher par marque : ",
@@ -15,5 +17,10 @@
     "return_to_research": "Retourner à la recherche",
     "api_error": "La recherche a échoué, veuillez réessayer plus tard",
     "restart_research": "Relancer la recherche"
+  },
+  "login": {
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "confirm": "Valider"
   }
 }
