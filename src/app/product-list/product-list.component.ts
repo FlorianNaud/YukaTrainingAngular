@@ -48,7 +48,7 @@ export class ProductListComponent implements OnInit {
   this.researchService.getListProduct(this.category,this.brand, this.nutriscore )
 .pipe(timeout(20000)).subscribe({
        next: (v) => this.handleSuccess(v),
-      error: (e) => this.handleFailure()
+      error: () => this.handleFailure()
 
 })
 }
@@ -85,8 +85,7 @@ export class ProductListComponent implements OnInit {
   handlePage(event){
     this.productList = "";
     this.researchService.getListProduct(this.category,this.brand, this.nutriscore, event.pageIndex+1  , event.pageSize )
-      .pipe(tap(data => {
-      })).subscribe((data)=>{
+      .pipe(tap()).subscribe((data)=>{
       this.productList = data;
       this.length=this.productList.count
     })
@@ -99,8 +98,7 @@ export class ProductListComponent implements OnInit {
   onScroll(){
     console.log("hello")
     this.researchService.getListProduct(this.category,this.brand, this.nutriscore, this.pageIndex )
-      .pipe(tap(data => {
-      })).subscribe((data)=>{
+      .pipe(tap()).subscribe((data)=>{
         let test;
         test=data;
         for(let i=0;i<test.products.length;i++){

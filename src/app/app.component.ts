@@ -7,7 +7,7 @@ import { Component,  } from '@angular/core';
 })
 export class AppComponent {
   title = 'foodInfo';
-
+  username = localStorage.getItem('user');
 
   ngOnInit(): void {
     this.user()
@@ -15,8 +15,8 @@ export class AppComponent {
 
   }
   user(): any {
+    this.username = localStorage.getItem('user');
     return localStorage.getItem('user');
-
   }
   logout(){
     localStorage.clear()

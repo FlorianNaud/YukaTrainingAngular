@@ -21,6 +21,8 @@
   "login": {
     "username": "Nom d'utilisateur",
     "password": "Mot de passe",
-    "confirm": "Valider"
+    "confirm": "Valider",
+    "invalid_password_field": "Ce champ doit être rempli et votre mot de passe doit faire 4 caractères",
+    "invalid_username_field": "Ce champ doit être rempli et votre identifiant doit faire 4 caractères"
   }
 }

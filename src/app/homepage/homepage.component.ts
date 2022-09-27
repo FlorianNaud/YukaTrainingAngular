@@ -51,7 +51,6 @@ export class HomepageComponent implements OnInit {
         this.loginService.getUser(this.token).subscribe(
           data =>{
             localStorage.setItem('user', data["username"]);
-            localStorage.setItem('role', data["roles"]);
           }
         )
       }

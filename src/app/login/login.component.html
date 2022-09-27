@@ -1,14 +1,21 @@
-<form class="example-form layout" (ngSubmit)="search(f)" #f="ngForm" novalidate>
+<form class="example-form layout" (ngSubmit)="search(f)" #f="ngForm" novalidate [formGroup]="ngForm">
   <label> {{ 'login.username' | translate }} </label>
   <mat-form-field class="example-full-width " appearance="fill" >
     <mat-label>{{ 'login.username' | translate }}</mat-label>
-    <input matInput   ngModel name="username">
+    <input matInput   ngModel name="username" type="username" formControlName="username">
   </mat-form-field>
+  <div class="field-message" *ngIf="username.errors && f.touched">
+    {{'login.invalid_username_field' | translate}}
+  </div>
+
   <label> {{ 'login.password' | translate }} </label>
   <mat-form-field class="example-full-width " appearance="fill"  >
     <mat-label>{{ 'login.password' | translate }}</mat-label>
-    <input matInput   ngModel name="password">
+    <input matInput   ngModel name="password" type="password" formControlName="password">
   </mat-form-field>
-  <button mat-raised-button color="primary" class="submit">{{ 'login.confirm' | translate }}</button>
+  <div class="field-message" *ngIf="password.errors && f.touched" >
+    {{'login.invalid_password_field' | translate}}
+  </div>
+  <button mat-raised-button color="primary" class="submit" [disabled]="!ngForm.valid">{{ 'login.confirm' | translate }}</button>
 </form>
 <div><p>{{errorMessage}}</p></div>

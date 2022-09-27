@@ -25,6 +25,8 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {MultiTranslateHttpLoader} from "ngx-translate-multi-http-loader";
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -67,7 +69,8 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
